@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Skip Node built-in modules even when imports omit the `node:` prefix.
+- Remove the unused vulnerable Zod runtime dependency.
+
 ## 0.1.0
 
 - Initial public release.

@@ -1,4 +1,5 @@
 import type { NamedImport } from "./types.js";
+import { isBuiltin } from "node:module";
 import ts from "typescript";
 
 export function parseNamedImports(file: string, sourceText: string): NamedImport[] {
@@ -11,7 +12,7 @@ export function parseNamedImports(file: string, sourceText: string): NamedImport
     }
 
     const moduleName = statement.moduleSpecifier.text;
-    if (moduleName.startsWith(".") || moduleName.startsWith("node:")) {
+    if (moduleName.startsWith(".") || moduleName.startsWith("node:") || isBuiltin(moduleName)) {
       continue;
     }
 

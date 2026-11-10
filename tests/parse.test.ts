@@ -8,6 +8,10 @@ describe("parseNamedImports", () => {
       `import defaultThing, { realExport, missingExport as localMissing } from "demo-pkg";
 import type { TypeExport } from "types-pkg";
 import { local } from "./local";
+import { readFile } from "node:fs/promises";
+import { futureApi } from "node:future";
+import { stat } from "fs";
+import { access } from "fs/promises";
 `
     );
 
