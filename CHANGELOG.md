@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Run CI with the Node 24-based `actions/setup-node@v7` runtime.
 - Skip Node built-in modules even when imports omit the `node:` prefix.
 - Remove the unused vulnerable Zod runtime dependency.
 

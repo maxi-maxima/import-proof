@@ -2,6 +2,7 @@
 
 ## 未发布
 
+- CI 改用基于 Node 24 的 `actions/setup-node@v7` 运行时。
 - 即使 import 省略 `node:` 前缀，也会跳过 Node 内置模块。
 - 移除未使用且存在漏洞的 Zod 运行时依赖。
 
